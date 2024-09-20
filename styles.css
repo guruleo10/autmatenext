@@ -1,0 +1,334 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: 700; /* Make text bold */
+    font-style: italic; /* Make text cursive (italic) */
+}
+
+/* Make headings bold and cursive */
+h1, h2, h3 {
+    font-weight: 700; /* Bold font for headings */
+    font-style: italic; /* Cursive font for headings */
+}
+
+/* Make paragraph and other text bold and cursive */
+p, ul, li, a, form label, input, textarea, button {
+    font-weight: 700; /* Bold text */
+    font-style: italic; /* Cursive text */
+}
+
+nav ul li a {
+    font-weight: 700; /* Bold font for navigation */
+    font-style: italic; /* Cursive navigation links */
+}
+
+/* Pricing Table specific styling */
+.pricing-table .plan h3 {
+    font-weight: 700; /* Bold pricing titles */
+    font-style: italic; /* Cursive pricing titles */
+}
+
+/* Testimonials text bold and cursive */
+.testimonials blockquote {
+    font-weight: 700; /* Bold text for testimonials */
+    font-style: italic; /* Cursive testimonials */
+}
+
+.testimonials cite {
+    font-weight: 700; /* Bold font for testimonial citations */
+    font-style: italic; /* Cursive testimonial citations */
+}
+
+/* Footer bold and cursive */
+footer p, footer a {
+    font-weight: 700; /* Bold footer text and links */
+    font-style: italic; /* Cursive footer text and links */
+}
+/* Main Layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Flexbox for header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFA500;
+}
+
+/* Footer Layout */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-content, .footer-contact, .footer-map {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-content ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* Mobile First: Default Styles (for small screens) */
+
+/* Media Queries for Tablets (768px and above) */
+@media screen and (min-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    .footer-content ul {
+        justify-content: space-between;
+    }
+
+    .footer-map iframe {
+        width: 80%;
+        height: 400px;
+    }
+}
+
+/* Media Queries for Desktops (1024px and above) */
+@media screen and (min-width: 1024px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    .footer-content, .footer-contact, .footer-map {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-map iframe {
+        width: 100%;
+        height: 400px;
+    }
+}
+/* Basic Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
+
+/* Mobile Navigation (hamburger menu) */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+    }
+}
+img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/* Header Styles */
+header {
+    background-color: #FFA500; /* Light orange color */
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo img {
+    max-width: 150px; /* Adjust logo size if needed */
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.about, .services, .pricing, .testimonials, .gallery, .contact {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Pricing Table */
+.pricing-table {
+    display: flex;
+    justify-content: space-around;
+}
+
+.plan {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.plan h3 {
+    margin-top: 0;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Testimonials */
+.testimonials blockquote {
+    font-style: italic;
+    border-left: 5px solid #4CAF50;
+    margin: 20px;
+    padding-left: 10px;
+}
+
+.testimonials cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 5px 0;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #FFA500;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+footer a {
+    color: #FFA500; /* Match the header's orange color */
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.footer-contact {
+    margin: 20px 0;
+}
+
+.footer-map {
+    margin: 20px 0;
+}
+
+.footer-map h3 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-legal {
+    margin-top: 20px;
+}
+
+.footer-legal a {
+    margin-right: 15px;
+}
+
+footer p {
+    font-weight: 700;
+    font-style: italic;
+    margin: 10px 0;
+}
+
